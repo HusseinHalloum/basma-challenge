@@ -11,6 +11,15 @@ section.header{
 section.header .main-container{
     position: relative;
 }
+.navbar .menu-burger-icon{
+    display: none;
+}
+.navbar .overlay.display-none{
+    width: 0%;
+}
+.navbar .overlay.display-block{
+    width: 100%;
+}
 .navbar .navbar-container, .navbar .links-container{
     display: flex;
     flex-direction: row;
@@ -22,11 +31,11 @@ section.header .main-container{
     background: transparent;
     position: fixed;
     z-index: 999;
-    width: 99%;
+    width: 100%;
     inset-inline-start: 0;
 }
 .navbar-container{
-    max-width: 79%;
+    max-width: 80%;
     margin: 0 auto;
 }
 .navbar .links-container .link-item-container{
@@ -36,6 +45,105 @@ section.header .main-container{
 .navbar .links-container .link-item-container a{
     color: #fff;
 }
-.navbar.active .navbar .links-container .link-item-container a{
-    color: #464646;
+.navbar.active{
+    transition: all 500ms ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar.active .links-container .link-item-container a {
+	color: #111;
+}
+/* Side Nav Style*/
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    /* background-color: #614cab; */
+    overflow-x: hidden;
+    transition: 1s;
+  }
+  .overlay .content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+  }
+  .overlay .content .block1 {
+    width: 64%;
+    background: #614cab;
+    opacity: 0.9;
+  }
+  .overlay .content .block2 {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    position: relative;
+  }
+  
+  .overlay .block2 .side-menu-items-main-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .overlay .content .block2 .side-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .overlay .block2 .side-menu-container a {
+    font-size: 26px;
+    transition: 0.3s;
+    line-height: 46px;
+    letter-spacing: 1.3px;
+    padding: 10px 0;
+    position: relative;
+    font-weight: 500;
+  }
+  
+  .overlay .closebtn {
+      cursor: pointer;
+    position: relative;
+    width: 100%;
+    padding: 45px 35px;
+    text-align: end;
+  }
+  .overlay .closebtn img {
+    width: 32px;
+    height: 32px;
+  }
+
+@media (max-width: 1100px) {
+    .navbar .menu-burger-icon{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .navbar .menu-burger-icon img{
+        width: 100%;
+        height: 100%;
+    }
+    .navbar .links-container{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .overlay .content .block1 {
+        width: 10%;
+      }
+      .overlay .content .block2 {
+        width: 90%;
+      }
 }

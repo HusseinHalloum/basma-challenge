@@ -4,7 +4,6 @@ import "./Banner.css";
 import ButtonFilled from "../UI/ButtonFilled";
 import ButtonOutline from "../UI/ButtonOutline";
 
-import BgIntro from "../../assets/images/bg-intro.png";
 import BannerImage from "../../assets/images/banner.png";
 
 const Banner = () => {

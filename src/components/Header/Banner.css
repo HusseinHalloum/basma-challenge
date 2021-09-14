@@ -68,3 +68,17 @@ align-items: center;
         font-size: 60px;
     }
 }
+@media (max-width: 768px) {
+    .banner .banner-inner-container{
+        display: flex;
+        flex-direction: column;
+        }
+        .banner .banner-inner-container .banner-title-container{
+            width: 100%;
+        } .banner .banner-inner-container .banner-image-container{
+            width: 100%;
+        }
+        .banner button:first-of-type{
+            margin-bottom: 30px;
+        }
+}
