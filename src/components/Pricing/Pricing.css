@@ -1,0 +1,48 @@
+.pricing-section .items{
+    box-shadow: none;
+    padding-bottom: 0;
+}
+.pricing-section .items:nth-child(2){
+    background-color: #614cab;
+    color: #fff;
+}
+.pricing-section .items .pricing-type{
+    font-size: 24px;
+}
+.pricing-section .items .pricing-price{
+    font-size: 40px;
+    color: #614cab;
+    margin: 14px;
+    font-weight: 600;
+}
+.pricing-section .items:nth-child(2) .pricing-price{
+    color: #fff;
+}
+.pricing-section .items p {
+	font-size: 19px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+.pricing-section .items p.supported{
+    color: #8a8a8a;
+}
+.pricing-section .items p.not-supported{
+    color: #ddd;
+}
+.pricing-section .items:nth-child(2) p.supported{
+    color: #fff;
+}
+.pricing-section .items:nth-child(2) p.not-supported{
+    color: #aaa;
+}
+.pricing-section .button-filled{
+   margin-bottom: -20px;
+}
+.pricing-section .button-filled:hover{
+    background: #fff;
+}
+@media (max-width: 768px) {
+    .pricing-section .items{
+        margin-bottom: 50px;
+    }
+}

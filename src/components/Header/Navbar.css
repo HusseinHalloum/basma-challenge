@@ -1,0 +1,41 @@
+section.header{
+    padding: 0;
+    background-color: #f8f5ff;
+    /* height: 103vh; */
+    background-image: url('../../assets/images/bg-intro.png');
+    background-size: 57%;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+}
+section.header .main-container{
+    position: relative;
+}
+.navbar .navbar-container, .navbar .links-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    padding: 20px 0;
+    background: transparent;
+    position: fixed;
+    z-index: 999;
+    width: 99%;
+    inset-inline-start: 0;
+}
+.navbar-container{
+    max-width: 79%;
+    margin: 0 auto;
+}
+.navbar .links-container .link-item-container{
+    margin-inline-start: 30px;
+    font-size: 16px;
+}
+.navbar .links-container .link-item-container a{
+    color: #fff;
+}
+.navbar.active .navbar .links-container .link-item-container a{
+    color: #464646;
+}
