@@ -10,7 +10,7 @@ import AngleRight from '../../assets/icons/angle-double-right.svg';
 import AngleLeft from '../../assets/icons/angle-double-left.svg';
 
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer className="contact-section" id="footer">
             <div className="main-container">
@@ -29,15 +29,15 @@ const Footer = () => {
                         </div>
                         <div className="links-container">
                             <a href="#about" className="link-item">
-                                <div className="icon-container"><img src={AngleRight} alt="icon" /></div>
+                                <div className="icon-container"><img src={props.isEnglish ? AngleRight : AngleLeft} alt="icon" /></div>
                                 <p>About us</p>
                             </a>
                             <a href="#contact" className="link-item">
-                                <div className="icon-container"><img src={AngleRight} alt="icon" /></div>
+                                <div className="icon-container"><img src={props.isEnglish ? AngleRight : AngleLeft} alt="icon" /></div>
                                 <p>Contact</p>
                             </a>
                             <a href="#portfolio" className="link-item">
-                                <div className="icon-container"><img src={AngleRight} alt="icon" /></div>
+                                <div className="icon-container"><img src={props.isEnglish ? AngleRight : AngleLeft} alt="icon" /></div>
                                 <p>Portfolio</p>
                             </a>
                         </div>
@@ -48,15 +48,15 @@ const Footer = () => {
                         </div>
                         <div className="links-container">
                             <a href="mailto:support@example.com" className="link-item">
-                                <div className="icon-container"><img src={AngleRight} alt="icon" /></div>
+                                <div className="icon-container"><img src={props.isEnglish ? AngleRight : AngleLeft} alt="icon" /></div>
                                 <p>support@example.com</p>
                             </a>
                             <a href="tel:+61383766284 " className="link-item">
-                                <div className="icon-container"><img src={AngleRight} alt="icon" /></div>
+                                <div className="icon-container"><img src={props.isEnglish ? AngleRight : AngleLeft} alt="icon" /></div>
                                 <p>+61 3 8376 6284 </p>
                             </a>
                             <a href="#services" className="link-item">
-                                <div className="icon-container"><img src={AngleRight} alt="icon" /></div>
+                                <div className="icon-container"><img src={props.isEnglish ? AngleRight : AngleLeft} alt="icon" /></div>
                                 <p>Services</p>
                             </a>
                         </div>

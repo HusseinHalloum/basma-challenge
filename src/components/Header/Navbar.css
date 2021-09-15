@@ -2,11 +2,16 @@ section.header{
     padding: 0;
     background-color: #f8f5ff;
     /* height: 103vh; */
-    background-image: url('../../assets/images/bg-intro.png');
     background-size: 57%;
     background-repeat: no-repeat;
-    background-position: top right;
-
+}
+section.header.right{
+  background-image: url('../../assets/images/bg-intro-right.png');
+  background-position: top right;
+}
+section.header.left{
+  background-image: url('../../assets/images/bg-intro-left.png');
+  background-position: top left;
 }
 section.header .main-container{
     position: relative;
@@ -52,6 +57,10 @@ section.header .main-container{
 }
 .navbar.active .links-container .link-item-container a {
 	color: #111;
+  transition: 200ms ease-in;
+}
+.navbar.active .links-container .link-item-container a:hover {
+	color: #614cab;
 }
 /* Side Nav Style*/
 .overlay {
@@ -60,7 +69,7 @@ section.header .main-container{
     position: fixed;
     z-index: 9999;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
     /* background-color: #614cab; */
     overflow-x: hidden;
     transition: 1s;
@@ -89,7 +98,7 @@ section.header .main-container{
   .overlay .block2 .side-menu-items-main-container {
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-left: 54px;
+    padding-inline-start: 54px;
     display: flex;
     flex-direction: column;
     justify-content: center;

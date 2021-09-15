@@ -84,6 +84,13 @@ section .main-container{
   max-width: 83%;
   margin: 0 auto;
 }
+.body-container[dir='rtl'] .about-section img,
+.body-container[dir='rtl'] .banner img,
+.body-container[dir='rtl'] .services-section img,
+.body-container[dir='rtl'] .portfolio-section img{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 span.text-with-stroke{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
