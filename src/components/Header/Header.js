@@ -3,12 +3,12 @@ import React from 'react';
 import Navbar from './Navbar';
 import Banner from './Banner';
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <section className="header">
+        <section className={props.isEnglish ? "header right" : "header left"}>
             <div className="main-container">
-                <Navbar />
-                <Banner />
+                <Navbar isEnglish={props.isEnglish} onClickSwitcher={props.onClickSwitcher}/>
+                <Banner isEnglish={props.isEnglish}/>
             </div>  
         </section>
     )

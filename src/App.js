@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
@@ -9,15 +9,20 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
+  const [isEnglish, setIsEnglish] = useState(true);
+
+  const onClickSwitcher = () => {
+    setIsEnglish(!isEnglish);
+  }
   return (
-    <div className="body-container">
-      <Header />
+    <div className="body-container" dir={isEnglish ? 'ltr' : 'rtl'}>
+      <Header isEnglish={isEnglish} onClickSwitcher={onClickSwitcher}/>
       <About />
       <Portfolio />
       <Service />
       <Pricing />
       <Contact />
-      <Footer />
+      <Footer isEnglish={isEnglish}/>
     </div>
   );
 };
