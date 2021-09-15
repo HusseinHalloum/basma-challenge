@@ -64,20 +64,20 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-        <div class="menu-burger-icon" onClick={() => setIsOpen(true)}>
+        <div className="menu-burger-icon" onClick={() => setIsOpen(true)}>
             <img src={Menu} alt="burger-menu" />
         </div>
       </div>
        {/* The overlay  */}
-    <div id="myNav" class={isOpen ? 'overlay display-block' : 'overlay display-none'}>
+    <div id="myNav" className={isOpen ? 'overlay display-block' : 'overlay display-none'}>
          {/* Overlay content  */}
-        <div class="content">
-            <div class="block1"></div>
-            <div class="block2 lato-black">
+        <div className="content">
+            <div className="block1"></div>
+            <div className="block2 lato-black">
                  {/* Button to close the overlay navigation  */}
-                <div onClick={() => setIsOpen(false)} class="closebtn"><img src={Close} alt="close-icon" /></div>
-                <div class="side-menu-items-main-container">
-                    <div class="side-menu-container">
+                <div onClick={() => setIsOpen(false)} className="closebtn"><img src={Close} alt="close-icon" /></div>
+                <div className="side-menu-items-main-container">
+                    <div className="side-menu-container">
                         <a href="" onClick={() => setIsOpen(false)}>Home</a>
                         <a href="#about" onClick={() => setIsOpen(false)}>About</a>
                         <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
